@@ -3,11 +3,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/index/<title>')
+@app.route('/list_profs/<title>')
 def index(title):
     params = dict()
     params["title"] = title
-    return render_template("base.html", **params)
+    return render_template("list_profs.html", **params)
 
 
 if __name__ == '__main__':
