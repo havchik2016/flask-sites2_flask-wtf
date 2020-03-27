@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/list_profs/<title>')
-def index(title):
+def list_profs(title):
     params = dict()
     params["title"] = title
     return render_template("list_profs.html", **params)
